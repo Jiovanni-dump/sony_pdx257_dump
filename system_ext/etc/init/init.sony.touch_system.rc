@@ -1,0 +1,10 @@
+# Copyright (c) 2024 Sony Mobile Communications Inc.
+# All rights, including trade secret rights, reserved.
+#
+
+on early-boot
+
+# Touch
+# libsysinfo
+    restorecon /sys/bus/i2c/devices/3-0038/fts_fw_version
+    restorecon /sys/bus/i2c/devices/3-0038/fts_irq

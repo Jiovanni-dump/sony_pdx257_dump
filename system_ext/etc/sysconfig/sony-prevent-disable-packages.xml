@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2024 Sony Corporation
+-->
+
+<config>
+    <prevent-disable package="com.google.android.inputmethod.latin" />
+    <prevent-disable package="com.google.android.apps.setupwizard.searchselector" />
+    <prevent-disable package="com.android.providers.downloads" />
+    <prevent-disable package="com.sonymobile.xperiasystemserver" />
+    <prevent-disable package="com.sonymobile.intelligent.iengine" />
+    <prevent-disable package="com.android.smspush" />
+</config>

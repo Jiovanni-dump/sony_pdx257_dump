@@ -1,0 +1,38 @@
+##### Overwrite prop values by composition #####
+ro.system_ext.build.id=72.0.A.2.34
+
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system_ext.brand=Sony
+ro.product.system_ext.device=qssi_64
+ro.product.system_ext.manufacturer=Sony
+ro.product.system_ext.model=Systemext_pdx257_generic
+ro.product.system_ext.name=systemext_pdx257_generic
+ro.system_ext.build.date=Tue Jul 29 18:59:05 JST 2025
+ro.system_ext.build.date.utc=1753783145
+ro.system_ext.build.fingerprint=Sony/systemext_pdx257_generic/qssi_64:15/AQ3A.250129.001/QSSI-15.3.0-REL-250729-0908:user/release-keys
+ro.system_ext.build.tags=release-keys
+ro.system_ext.build.type=user
+ro.system_ext.build.version.incremental=QSSI-15.3.0-REL-250729-0908
+ro.system_ext.build.version.release=15
+ro.system_ext.build.version.release_or_codename=15
+ro.system_ext.build.version.sdk=35
+####################################
+# from variable PRODUCT_SYSTEM_EXT_PROPERTIES
+####################################
+ro.config.isolated_compilation_enabled=true
+ro.audio.ihaladaptervendorextension_enabled=true
+persist.vendor.dpm.feature=11
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
+persist.nfc.debug_enabled=false
+ro.sys.thermal.incoming_call=ON
+ro.sys.thermal.notify_5g_notification=ON
+ro.sys.thermal.notify_chargeoff=ON
+ro.sys.thermal.notify_iec_notification=ON
+ro.sys.thermal.notify_not_auto_dismiss=ON
+ro.sys.thermal.ambient_temperature_estimation_on=ON
+# end of file
+

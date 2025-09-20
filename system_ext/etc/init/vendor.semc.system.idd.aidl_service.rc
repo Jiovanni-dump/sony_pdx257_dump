@@ -1,0 +1,5 @@
+service vendor.semc.system.idd.aidl_service-v1 /system_ext/bin/vendor.semc.system.idd.aidl_service
+      class hal
+      user system_ext_idd
+      group system_ext_idd log inet oem_2993 oem_2999
+      writepid /dev/cpuset/system-background/tasks

@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/semc/interfaces/idd/aidl/aidl_service/vendor.semc.system.idd.aidl_service.xml
+-->
+<manifest version="8.0" type="framework">
+    <hal format="aidl">
+        <name>vendor.semc.system.idd</name>
+        <fqname>IIddSystem/default</fqname>
+        <fqname>IIddSystem/logreader</fqname>
+    </hal>
+</manifest>
