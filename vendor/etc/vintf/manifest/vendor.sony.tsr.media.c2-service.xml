@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/semc/frameworks/media/360ra/decoder/c2store/services/vendor.sony.tsr.media.c2-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.media.c2</name>
+        <fqname>IComponentStore/threesixtyra</fqname>
+    </hal>
+</manifest>

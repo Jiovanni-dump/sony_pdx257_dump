@@ -1,0 +1,4 @@
+overrideLogLevels=1
+logCoreCfgMask=0x80
+logConfigMask=0
+logRequestMapping=FALSE

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<Config>
+    <Colormode id="1">
+        <Matrix lux="10" m11="1.0000" m12="0.0000" m13="0.0000" m21="0.0000" m22="1.0000" m23="0.0000" m31="0.0000" m32="0.0000" m33="1.0000" />
+        <Matrix lux="50000" m11="1.0000" m12="0.0000" m13="0.0000" m21="0.0000" m22="1.0000" m23="0.0000" m31="0.0000" m32="0.0000" m33="1.0000" />
+    </Colormode>
+    <Throttler>
+        <Debounce increase="50" decrease="50" />
+        <Thresholds>
+            <Threshold base="0" increase="0.05" decrease="0.05" />
+            <Threshold base="50" increase="0.05" decrease="0.05" />
+            <Threshold base="100" increase="0.05" decrease="0.05" />
+            <Threshold base="200" increase="0.05" decrease="0.05" />
+            <Threshold base="5000" increase="0.05" decrease="0.05" />
+        </Thresholds>
+    </Throttler>
+    <Iir>
+        <Interval>200</Interval>
+        <Alpha>
+            <presets>
+                <lux>0</lux>
+                <value>0.97</value>
+            </presets>
+            <presets>
+                <lux>50000</lux>
+                <value>0.90</value>
+            </presets>
+        </Alpha>
+        <Threshold>0.05</Threshold>
+    </Iir>
+</Config>

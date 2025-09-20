@@ -1,0 +1,25 @@
+service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
+    class hal
+    user system
+    group system input
+
+    disabled
+
+on early-boot
+    wait /sys/class/leds/vibrator/trigger
+    write /sys/class/leds/vibrator/trigger "transient"
+    chown system system /sys/class/leds/vibrator/trigger
+
+    wait /sys/class/leds/vibrator/activate
+    chown system system /sys/class/leds/vibrator/activate
+
+    wait /sys/class/leds/vibrator/duration
+    chown system system /sys/class/leds/vibrator/duration
+
+    wait /sys/class/leds/vibrator/state
+    chown system system /sys/class/leds/vibrator/state
+
+on boot
+    enable vendor.qti.vibrator
+
+
