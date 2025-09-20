@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.google.android.apps.accessibility.voiceaccess">
+        <permission name="android.permission.RECORD_AUDIO"/>
+    </privapp-permissions>
+</permissions>

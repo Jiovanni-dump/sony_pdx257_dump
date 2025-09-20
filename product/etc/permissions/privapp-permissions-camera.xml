@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright 2023 Sony Corporation
+-->
+
+<!-- for the partition: /system_ext -->
+<permissions>
+
+  <privapp-permissions package="jp.co.sony.mc.cameraapp2">
+    <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+  </privapp-permissions>
+
+</permissions>

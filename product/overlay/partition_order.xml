@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+
+    Custom partition order for overlays, prio in ascending order,
+    i.e. system has lowest prio and oem the highest.
+-->
+<partition-order>
+    <partition name="system"/>
+    <partition name="vendor"/>
+    <partition name="odm"/>
+    <partition name="system_ext"/>
+    <partition name="product"/>
+    <partition name="oem"/>
+</partition-order>
