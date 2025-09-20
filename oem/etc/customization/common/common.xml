@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<customization id="common">
+   <!-- GMS app -->
+   <!-- Operator app which allocate /system_ext or /product (i.e. hidden API app or priv-app) -->
+</customization>
+

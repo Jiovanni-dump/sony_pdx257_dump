@@ -1,0 +1,14 @@
+# sssi_64-user 15 AQ3A.250129.001 QSSI-15.3.0-REL-250729-0908 release-keys
+- manufacturer: sony
+- platform: parrot
+- codename: pdx257
+- flavor: sssi_64-user
+- release: 15
+- id: 72.0.A.2.34
+- incremental: QSSI-15.3.0-REL-250729-0908
+- tags: release-keys
+- fingerprint: Sony/pdx257/pdx257:15/AQ3A.250129.001/ELBE-1.0.0-REL-250729-0908:user/release-keys
+- is_ab: true
+- brand: Sony
+- branch: sssi_64-user-15-AQ3A.250129.001-QSSI-15.3.0-REL-250729-0908-release-keys
+- repo: sony_pdx257_dump

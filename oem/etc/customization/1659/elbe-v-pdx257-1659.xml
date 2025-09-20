@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<!--
+    Copyright 2021 Sony Corporation
+    All rights, including trade secret rights, reserved.
+-->
+<customization id="1659" >
+    <overlay-package name="com.android.settings.product.res.overlay.wfc_collect_location_warning_non_static" />
+    <overlay-package name="com.android.settings.product.res.overlay.orange_vowifi_non_static" />
+    <overlay-package name="com.android.phone.product.res.overlay.orange_ims_non_static" />
+</customization>

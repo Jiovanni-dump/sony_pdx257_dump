@@ -1,0 +1,58 @@
+##### Add prop values by composition #####
+ro.semc.product.model=XQ-FE72
+ro.semc.ms_type_id=PM-1515-BV
+ro.semc.product.device=FE
+ro.product.model=XQ-FE72
+ro.product.system.model=XQ-FE72
+ro.product.vendor.model=XQ-FE72
+ro.product.odm.model=XQ-FE72
+ro.product.product.model=XQ-FE72
+ro.product.system_ext.model=XQ-FE72
+ro.product.name=XQ-FE72
+ro.product.system.name=XQ-FE72
+ro.product.vendor.name=XQ-FE72
+ro.product.odm.name=XQ-FE72
+ro.product.product.name=XQ-FE72
+ro.build.product=XQ-FE
+ro.product.device=XQ-FE
+ro.product.system.device=XQ-FE
+ro.product.vendor.device=XQ-FE
+ro.product.odm.device=XQ-FE
+ro.product.product.device=XQ-FE
+ro.product.system_ext.device=XQ-FE
+ro.build.version.incremental=072000A002003401398736412
+ro.system.build.version.incremental=072000A002003401398736412
+ro.vendor.build.version.incremental=072000A002003401398736412
+ro.odm.build.version.incremental=072000A002003401398736412
+ro.product.build.version.incremental=072000A002003401398736412
+ro.system_ext.build.version.incremental=072000A002003401398736412
+ro.build.fingerprint=Sony/XQ-FE72/XQ-FE:15/72.0.A.2.34/072000A002003401398736412:user/release-keys
+ro.build.display.id=72.0.A.2.34 release-keys
+ro.build.description=XQ-FE72-user 15 72.0.A.2.34 072000A002003401398736412 release-keys
+ro.build.host=BuildHost
+ro.build.user=BuildUser
+ro.oem.build.date=Tue Jul 29 21:23:49 JST 2025
+ro.oem.build.date.utc=1753791829
+ro.semc.version.sw_revision=72.0.A.2.34
+ro.semc.version.sw_variant=GLOBAL-C2
+ro.semc.version.sw_type=user
+
+# Copyright 2024 Sony Corporation
+
+################### Static values ###################
+#
+# <key>=<value>
+# e.g. ro.com.google.ime.height_ratio=1.1
+#
+#####################################################
+ro.vendor.sony.wlan.6e_cc_list=HK,JP,AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LI,LT,LU,MT,NL,NO,PL,PT,RO,SK,SI,ES,SE,GB,CH,IS,MY,TH,TW,SG,MO
+ro.setupwizard.rotation_locked=false
+ro.com.google.ime.height_ratio=1.1
+ro.com.google.ime.key_border=true
+ro.com.google.ime.theme_id=5
+setupwizard.feature.baseline_setupwizard_enabled=true
+ro.oem_sar_back_off_index_table=1,2,1,1,1,6,2,8,1,1,5,2,8,1,7,5,2,8,1,7,1,2,1,1,1,6,2,8,1,1,5,2,8,1,7,5,2,8,1,7
+ro.trackingId.booking=2428090
+ro.facebook.partnerid=sony:ee6c6fe5-cdd0-47f1-a355-9d672e85086a
+ro.linkedin.channel=Sony_PRELOAD
+#####################################################

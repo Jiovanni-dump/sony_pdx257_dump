@@ -1,0 +1,7 @@
+######################## Customized property values #########################
+ro.com.google.acsa=true
+ro.com.google.clientidbase.am=android-kddi-jp
+ro.com.google.clientidbase.ms=android-kddi-jp-rvc3
+ro.com.google.clientidbase.vs=android-kddi-jp-rvc3
+ro.facebook.partnerid=kddi:63284c35-9c35-45ac-bb91-258c377cf580
+#############################################################################

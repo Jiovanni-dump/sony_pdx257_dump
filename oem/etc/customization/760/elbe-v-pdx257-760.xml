@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<!--
+    Copyright 2021 Sony Corporation
+    All rights, including trade secret rights, reserved.
+-->
+<customization id="760" >
+    <overlay-package name="com.android.providers.partnerbookmarks.overlay_760" />
+    <app-package name="com.activision.callofduty.shooter" enabled="false"/>
+</customization>

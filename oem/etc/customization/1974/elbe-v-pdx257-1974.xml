@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<!--
+    Copyright 2021 Sony Corporation
+    All rights, including trade secret rights, reserved.
+-->
+<customization id="1974" >
+    <overlay-package name="com.android.settings.product.res.overlay.wfc_collect_location_warning_non_static" />
+</customization>

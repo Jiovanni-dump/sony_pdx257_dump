@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<!--
+    Copyright 2021 Sony Corporation
+    All rights, including trade secret rights, reserved.
+-->
+<customization id="c000850" >
+    <overlay-package name="com.sonymobile.datadisclaimer.overlay_c000850" />
+    <overlay-package name="com.sonymobile.launcher.overlay_c000850" />
+    <overlay-package name="com.sonymobile.simplehome.overlay_c000850" />
+    <overlay-package name="com.android.systemui.product.res.overlay.rat_icon_4g_to_4gplus_non_static" />
+</customization>
