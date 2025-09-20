@@ -1,0 +1,137 @@
+# Copyright 2024 Sony Corporation
+#
+# init.sony-platform.rc
+#
+
+on early-init
+    #Fels configuration for system groups
+    chown system system /sys/kernel/fels/log
+    chown system system /sys/kernel/fels/debug_log
+    chmod 0440 /sys/kernel/fels/log
+    chmod 0440 /sys/kernel/fels/debug_log
+
+#Disable fels_debug logging
+on early-init && property:ro.build.type=user
+    write /sys/module/fels/parameters/fels_debug_enable 0
+
+#set warm reset on S2 for userdebug only
+on late-fs && property:ro.build.type=userdebug
+    exec u:r:pmic_key_reset:s0 root drmrpc -- /vendor/bin/pmic_key_reset 2 0 4480 0
+
+on init
+    # Add permission to sysrq-trigger
+    chown root system /proc/sysrq-trigger
+    chmod 0220 /proc/sysrq-trigger
+
+    # SONY: Start the TrimArea Daemon. It must be started before fota-ua
+    symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
+    wait /dev/block/sda1
+    chown oem_2997 oem_2997 /dev/block/sda1
+    chmod 0770 /dev/block/sda1
+    class_start trimarea
+    exec u:r:tad:s0 system -- /vendor/bin/wait4tad
+    
+    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
+    setprop ro.oem.key1 ${ro.boot.hardware.sku}
+    setprop ro.vendor.bt.bdaddr_path /data/vendor/etc/bluetooth_bdaddr
+
+on property:ro.boot.hardware.sku=""
+    setprop ro.oem.key1 c999999
+
+on post-fs
+
+    # Wifi
+    mkdir /mnt/vendor/persist/wifi 0700 root system
+    mkdir /mnt/vendor/persist/wifi/qca6750 0700 root system
+
+on property:sys.powerctl=*
+    start spcdeld
+
+# SONY: TrimArea Daemon
+# Last 2 args: start block(blk size 128k), number of blocks(partitionsize(kb)/128(kb))
+service tad /vendor/bin/tad /dev/block/bootdevice/by-name/TA 0,16
+    user oem_2997
+    group oem_2997 root
+    socket tad stream 0660 system oem_2993
+    class trimarea
+    seclabel u:r:tad:s0
+
+on init && property:ro.build.type=userdebug
+    write /sys/module/powerkey_forcecrash/parameters/forcecrash_on 1
+#Touch
+on property:vendor.backlight_on=1
+    write /sys/bus/i2c/devices/3-0038/fts_irq 1
+
+on property:vendor.backlight_on=0
+    write /sys/bus/i2c/devices/3-0038/fts_irq 0
+
+#spc file delete service
+service spcdeld /vendor/bin/spcdeld
+    user system
+    group system
+    disabled
+
+on init && property:ro.build.type=user
+    write /sys/kernel/dload/dload_mode mini
+
+#charger
+on charger && property:ro.build.type=userdebug
+    mkdir /mnt/vendor/persist 0771 root system
+    wait /dev/block/bootdevice/by-name/persist
+    mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/charge_log 0770 system system
+on charger
+    # charge_service
+    start charge_service
+    # Set USB mode to MSC for SDP charging
+    setprop sys.usb.config mass_storage_charge
+    # chargemon
+    wait /sys/class/power_supply/battery/capacity 100
+    start chargemon
+    # backlight
+    wait /sys/class/backlight/panel0-backlight/brightness 100
+    chown system system /sys/class/backlight/panel0-backlight/brightness
+on boot && property:ro.build.type=userdebug
+    mkdir /data/vendor/charge_log 0770 system system
+on boot
+    # charge_service
+    start charge_service
+on post-fs-data
+# chargemon
+service chargemon /vendor/bin/chargemon
+    user system
+    group root system oem_2993 wakelock input
+    capabilities SYS_BOOT
+    disabled
+# Charge service
+service charge_service /vendor/bin/charge_service
+    user system
+    # Add oem_2993 to the group of charge_service for access MiscTA.
+    # Add wakelock to the group of charge_service for access "/sys/power/wake_lock" and "/sys/power/wake_unlock".
+    group system root oem_2993 wakelock
+    writepid /dev/cpuset/system-background/tasks
+    disabled
+# Set value in property to sysfs for SmartCharge
+on property:persist.vendor.battery.smt_chg=activate
+    write /sys/class/battchg_ext/smart_charging_activation 1
+on property:persist.vendor.battery.smt_chg=charging_suspend
+    write /sys/class/battchg_ext/smart_charging_interruption 1
+on property:persist.vendor.battery.smt_chg=charging_resume
+    write /sys/class/battchg_ext/smart_charging_interruption 0
+# Boot completed notification for ChargeService
+on property:sys.boot_completed=1
+    write /sys/class/battchg_ext/bootup_shutdown_phase 3
+    write /sys/class/power_supply/battery/uevent change
+# Shutdown notification for ChargeService
+on property:sys.shutdown.requested=*
+    write /sys/class/battchg_ext/bootup_shutdown_phase 4
+    write /sys/class/power_supply/battery/uevent change
+
+
+# create directory for wfd
+on post-fs-data && property:ro.build.type=userdebug
+    mkdir /data/vendor/wfd 0777 system system
+
+on property:ro.build.type=user && property:ro.boot.verifiedbootstate=orange
+    setprop persist.sys.usb.config adb
+    

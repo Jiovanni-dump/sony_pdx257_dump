@@ -1,0 +1,4 @@
+import /odm/etc/customization/SOG16_jp_kdi/config.prop
+import /odm/etc/customization/MWF_jp_kdi/config.prop
+ro.product.odm.brand=KDDI
+ro.product.vendor.brand=KDDI
