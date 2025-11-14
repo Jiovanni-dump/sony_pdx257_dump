@@ -1,0 +1,47 @@
+#!/system/bin/sh
+#########################################################################
+#   AudioTest
+#   adb push AudioTest /system/bin
+#   chmod 755 /system/bin/AudioTest
+#########################################################################
+
+#HQ:
+#input: builtin_mic = 1; submic = 2;
+#output: receiver = 3; bottom_speaker = 4; top_speaker = 5;
+PLAYBACK()
+{
+    echo "start"
+    /system/bin/sh /vendor/bin/AudioPlayback.sh $1 $2
+}
+
+#Usage
+USAGE()
+{
+    echo -e "\r"
+    echo "Usage: AudioTest Para1 Para2"
+    echo "Para1"
+    echo "    1:Builtin_mic.   2:Submic   3:Receiver.     4:Bottom_Speaker.    5:Top_Speaker"
+    echo "Para2"
+    echo "    1:Set Audio playback mode"
+    echo "    0:Stop audio playback"
+    echo -e "\r"
+    echo "Testing continues until Ctrl-C is hit or the time limit is reached."
+}
+
+case $2 in
+    ["0"-"1"])
+        case $1 in
+            ["1"-"5"])
+                PLAYBACK $1 $2
+            ;;
+            *)
+                USAGE
+                exit 1
+            ;;
+        esac
+    ;;
+    *)
+        USAGE
+        exit 1
+    ;;
+esac

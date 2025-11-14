@@ -1,0 +1,24 @@
+#
+#Copyright 2024 Sony Corporation
+#
+#NOTE: This file has been modified by Sony Corporation
+#Modifications are licensed under the License.
+#
+
+on boot
+	setprop persist.vendor.enable.thermal.genl true
+
+on property:vendor.thermal.thermal-engine_ready=YES
+	# queue the trigger to start thermal-hal and continue execute
+	# per-device thermal setup "on property:vendor.thermal.thermal-engine_ready=YES"
+	trigger enable-thermal-hal
+
+on enable-thermal-hal
+	restart vendor.thermal-hal
+
+service vendor.thermal-hal /vendor/bin/hw/android.hardware.thermal-service.sony
+	interface aidl android.hardware.thermal.IThermal/default
+	class hal
+	user root
+	group root system
+	disabled

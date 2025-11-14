@@ -1,0 +1,13 @@
+<!--
+    Input:
+        device/somc/elbe/manifest.xml
+-->
+<manifest version="8.0" type="device" target-level="8">
+    <hal format="aidl">
+        <name>vendor.semc.hardware.spc</name>
+        <fqname>ISpc/default</fqname>
+    </hal>
+    <sepolicy>
+        <version>202404</version>
+    </sepolicy>
+</manifest>

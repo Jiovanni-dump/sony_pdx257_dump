@@ -1,0 +1,50 @@
+<!--
+    Input:
+        device/qcom/parrot66/manifest_parrot.xml
+        device/somc/elbe/config/wlan/vendor.somc.hardware.wifi.idd.manifest.xml
+        device/somc/elbe/config/wlan/vendor.somc.hardware.aidlwifidriver.manifest.xml
+-->
+<manifest version="8.0" type="device" target-level="202404">
+    <hal format="aidl">
+        <name>android.hardware.gatekeeper</name>
+        <fqname>IGatekeeper/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.nfc</name>
+        <fqname>INfc/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.secure_element</name>
+        <fqname>ISecureElement/eSE1</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.nxp.nxpnfc_aidl</name>
+        <fqname>INxpNfc/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.qti.hardware.wifidisplaysession_aidl</name>
+        <fqname>IWifiDisplaySession/default</fqname>
+        <fqname>IWifiDisplaySessionAudioTrack/default</fqname>
+        <fqname>IWifiDisplaySessionImageTrack/default</fqname>
+        <fqname>IWifiDisplaySessionVideoTrack/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.semc.hardware.spc</name>
+        <fqname>ISpc/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.aidlwifidriver</name>
+        <fqname>ISomcWifiDriver/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.security.aidlsecd</name>
+        <fqname>IDeviceSecurity/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.somc.hardware.wifi.idd</name>
+        <fqname>ISomcWifiIdd/default</fqname>
+    </hal>
+    <sepolicy>
+        <version>202404</version>
+    </sepolicy>
+</manifest>

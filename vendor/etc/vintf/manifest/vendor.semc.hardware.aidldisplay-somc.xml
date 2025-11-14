@@ -1,0 +1,12 @@
+<!--
+    Input:
+        vendor/semc/hardware/display/aidl/default/vendor.semc.hardware.aidldisplay-somc.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="aidl">
+        <name>vendor.semc.hardware.aidldisplay</name>
+        <version>2</version>
+        <fqname>IDisplay/default</fqname>
+        <fqname>IFramerateController/default</fqname>
+    </hal>
+</manifest>

@@ -1,0 +1,6 @@
+service vendor.sony.tsr.media.c2-hal /vendor/bin/hw/vendor.sony.tsr.media.c2-service
+    class hal
+    user mediacodec
+    ioprio rt 4
+    task_profiles ProcessCapacityHigh
+
