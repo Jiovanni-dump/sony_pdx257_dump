@@ -1,0 +1,71 @@
+##### Overwrite prop values by composition #####
+ro.odm.build.id=72.1.A.2.81
+
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.odm.brand=Sony
+ro.product.odm.device=pdx257
+ro.product.odm.manufacturer=Sony
+ro.product.odm.model=Pdx257
+ro.product.odm.name=pdx257
+ro.odm.product.cpu.abilist=arm64-v8a
+ro.odm.product.cpu.abilist32=
+ro.odm.product.cpu.abilist64=arm64-v8a
+ro.odm.build.date=Thu Oct 30 09:02:52 UTC 2025
+ro.odm.build.date.utc=1761814972
+ro.odm.build.fingerprint=Sony/pdx257/pdx257:15/AQ3A.250604.001/ELBE-1.1.0-REL-251030-0753:user/release-keys
+ro.odm.build.tags=release-keys
+ro.odm.build.type=user
+ro.odm.build.version.incremental=ELBE-1.1.0-REL-251030-0753
+ro.odm.build.version.release=15
+ro.odm.build.version.release_or_codename=15
+ro.odm.build.version.sdk=35
+####################################
+# from device/somc/elbe/odm.prop
+####################################
+#
+# platform specific part of odm.prop
+#
+# PCC matrix default values : pcc[0].R,pcc[0].G,pcc[0].B,pcc[1].R,pcc[1].G,pcc[1].B
+persist.vendor.display.pcc_matrix=0.000000,0.000000,0.000000,0.000000,0.000000,0.000000
+# Setup Wizard
+ro.com.android.prov_mobiledata=false
+# disable data roaming
+ro.com.android.dataroaming=false
+# property to turn off CdmaLTEPhone always
+telephony.lteOnCdmaDevice=0
+# lmkd
+# 1/18 of total memory
+ro.lmk.critical_available_threshold=18
+# Import sony customizations from config.prop
+import /odm/etc/customization/${ro.boot.hardware.sku}/config.prop
+# Audio when usb headset force use deep_buffer
+vendor.audio.usb.force.deep_buffer=true
+# Enable Color-Gamut
+persist.vendor.display.colorgamut.mode=1
+persist.vendor.display.sspp_color_mode=1
+vendor.display.hmd_mode=0
+# RID010783
+ro.odm.service.fpscontroller.supported=true
+# Display Disable LTM Control
+ro.vendor.display.ltm.lux_start_point=1
+####################################
+# from device/somc/pdx257/odm.prop
+####################################
+#
+# product common part of odm.prop
+#
+####################################
+# from variable ADDITIONAL_ODM_PROPERTIES
+####################################
+ro.vendor.qti.va_odm.support=1
+####################################
+# from variable PRODUCT_ODM_PROPERTIES
+####################################
+persist.vendor.qcom.bluetooth.aac_abr_support=true
+persist.sony.display.adaptive_color.mode=false
+ro.surface_flinger.enable_frame_rate_override=0
+# end of file
+

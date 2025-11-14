@@ -1,0 +1,10 @@
+# Copyright 2024 Sony Corporation
+#
+# product common configuration
+#
+
+on boot
+    chown system system /sys/bus/i2c/devices/3-0038/fts_fw_version
+    chmod 0644 /sys/bus/i2c/devices/3-0038/fts_fw_version
+    chown system system /sys/bus/i2c/devices/3-0038/fts_irq
+    chmod 0600 /sys/bus/i2c/devices/3-0038/fts_irq

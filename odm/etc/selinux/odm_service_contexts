@@ -1,0 +1,16 @@
+vendor.somc.hardware.aidlmiscta.IMisctaGlobal/default u:object_r:hal_miscta_service:s0
+vendor.semc.hardware.aidldisplay.IDisplay/default             u:object_r:hal_disp_service:s0
+vendor.semc.hardware.aidldisplay.IFramerateController/default u:object_r:hal_disp_service:s0
+vendor.somc.hardware.security.aidlsecd.IDeviceSecurity/default u:object_r:hal_secd_service:s0
+vendor.semc.hardware.spc.ISpc/default u:object_r:hal_spc_service:s0
+vendor.somc.hardware.aidlsuperstamina.ISuperStamina/default u:object_r:hal_somc_superstamina_service:s0
+android.hardware.camera.provider.ICameraProvider/external/0 u:object_r:hal_camera_service:s0
+vendor.semc.hardware.aidlthermal.ISomcThermalEngineWrapper/default u:object_r:hal_somc_thermal_service:s0
+android.hardware.media.c2.IComponentStore/threesixtyra u:object_r:hal_codec2_service:s0
+vendor.somc.hardware.wifi.idd.ISomcWifiIdd/default u:object_r:hal_somc_wifi_idd_service:s0
+vendor.somc.hardware.wifi.sniffer.ISomcWifiSniffer/default u:object_r:hal_somc_wifi_sniffer_service:s0
+vendor.somc.hardware.aidlsensor.ISensorCalibration/default u:object_r:hal_sensors_service:s0
+vendor.somc.hardware.perfagent.IPerfAgent/default                             u:object_r:hal_perfagent_service:s0
+vendor.somc.hardware.aidlwifidriver.ISomcWifiDriver/default u:object_r:hal_somc_wifidriver_service:s0
+vendor.semc.hardware.aidlmmwavedirection.IMmwavedirection/default u:object_r:hal_mmwave_service:s0
+vendor.qti.diaghal.Idiag/default               u:object_r:vendor_hal_diaghal_service:s0
