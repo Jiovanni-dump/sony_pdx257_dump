@@ -1,0 +1,5 @@
+
+ 
+enable_secondary_symbols
+>
+config_system_lm_dir&$/product/usr/share/ime/google/d3_lms
