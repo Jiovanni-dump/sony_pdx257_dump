@@ -1,0 +1,38 @@
+# SONY: Startup Logger
+service startup-logger /system_ext/bin/startup-logger system_idd
+   user system_ext_idd
+   group system root oem_2993
+   oneshot
+   priority -20
+   ioprio rt 0
+   seclabel u:r:startup-logger:s0
+   disabled
+
+service startup-logger-vendor /system_ext/bin/startup-logger vendor_idd
+   user oem_2987
+   group system root oem_2993
+   oneshot
+   priority -20
+   ioprio rt 0
+   seclabel u:r:startup-logger:s0
+   disabled
+
+
+on early-boot && property:ro.product.sony.idd.system=true
+    start startup-logger
+   
+on early-boot && property:ro.product.sony.idd.system=false
+    start startup-logger-vendor
+
+on property:sys.boot_completed=1 && property:ro.product.sony.idd.system=true
+    # First we need to stop the service so that logging is stopped as well
+    stop startup-logger
+    # Start again the service to remove logs
+    start startup-logger
+
+on property:sys.boot_completed=1 && property:ro.product.sony.idd.system=false
+    # First we need to stop the service so that logging is stopped as well
+    stop startup-logger-vendor
+    # Start again the service to remove logs
+    start startup-logger-vendor
+

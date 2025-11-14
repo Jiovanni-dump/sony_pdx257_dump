@@ -1,0 +1,9 @@
+on post-fs-data
+    start taimport
+
+service taimport /system_ext/bin/taimport
+    disabled
+    user root
+    group system
+    oneshot
+    seclabel u:r:taimport:s0

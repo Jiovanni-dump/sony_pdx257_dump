@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+-->
+
+<exceptions>
+    <exception package="com.sonymobile.transmitpower">
+        <permission name="android.permission.NEARBY_WIFI_DEVICES" fixed="false"/>
+    </exception>
+</exceptions>

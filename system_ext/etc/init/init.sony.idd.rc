@@ -1,0 +1,41 @@
+# Copyright 2018, 2024 Sony Corporation
+#
+on fs && property:ro.product.sony.idd.system=true
+    # early option is required
+    # because mount_all w/o option will handle encryption related code.
+    mount_all /system_ext/etc/idd.fstab --early
+
+    # prepare idd partition
+    restorecon_recursive /mnt/product/idd
+    chown system_ext_idd system_ext_idd /mnt/product/idd
+    chmod 0751 /mnt/product/idd
+    mkdir /mnt/product/idd/output 0755 system_ext_idd system_ext_idd
+    mkdir /mnt/product/idd/startup-prober 0700 root root
+
+    mkdir /dev/socket/idd_system 0711 system_ext_idd system_ext_idd
+
+    # Make fsck directory for fsck report.
+    mkdir /mnt/product/idd/fsck 0770 root system_ext_idd
+
+    # prepare rca partition
+    restorecon_recursive /mnt/product/rca
+    chown system_ext_idd system_ext_idd /mnt/product/rca
+    chmod 0750 /mnt/product/rca
+    mkdir /mnt/product/rca/plugins 0750 system_ext_idd system_ext_idd
+
+    restorecon_recursive /mnt/product/idd/output
+
+    mkdir /mnt/tmp/firmware 0750 system_ext_idd system_ext_idd
+    copy /vendor/firmware_mnt/verinfo/build_id.txt /mnt/tmp/firmware/build_id.txt
+    copy /vendor/firmware_mnt/verinfo/mcfg_pkg.txt /mnt/tmp/firmware/mcfg_pkg.txt
+    chown system_ext_idd system_ext_idd /mnt/tmp/firmware/build_id.txt
+    chown system_ext_idd system_ext_idd /mnt/tmp/firmware/mcfg_pkg.txt
+
+    start iddd_system
+
+service iddd_system /system_ext/bin/iddd_system
+    class core
+    user system_ext_idd
+    group system_ext_idd log inet oem_2993 system oem_2999
+    writepid /dev/cpuset/system-background/tasks
+    disabled

@@ -1,0 +1,5 @@
+# Copyright 2020, 2025 Sony Corporation.
+
+on post-fs
+    #area_count
+    chmod 0444 /sys/devices/dsi_panel_driver/area_count

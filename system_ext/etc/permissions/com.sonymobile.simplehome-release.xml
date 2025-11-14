@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2023 Sony Corporation
+-->
+<permissions>
+ <privapp-permissions package="com.sonymobile.simplehome">
+        <permission name="android.permission.BIND_APPWIDGET"/>
+        <permission name="android.permission.CHANGE_CONFIGURATION"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.RECEIVE_STK_COMMANDS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>
+
