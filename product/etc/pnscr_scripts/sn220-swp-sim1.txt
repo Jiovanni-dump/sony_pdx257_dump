@@ -1,0 +1,25 @@
+reset 0
+reset 1
+interval 50
+
+// NCI CORE RESET CMD (Keep Configuration)
+send 20000100
+
+// NCI CORE INIT CMD
+send 2001020000
+
+// NCI_PROPRIETARY_ACT_CMD
+send 2F0200
+
+interval 100
+
+// TEST_SWP_CMD (UICC)
+send 2F3E0100
+// wait notify (bytes 3: status; bytes 4: power mode)
+// power mode:
+//   0x00: No SIMVCC
+//   0x01: SIMVCC = 1.8V
+//   0x02: SIMVCC = 3.3V
+//   0x03: SIMVCC undetemined
+trigger 6F3E02
+

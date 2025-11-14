@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <enabled-in-sku-override package="jp.co.sony.mc.batteryfirstusagechecker"/>
+</config>

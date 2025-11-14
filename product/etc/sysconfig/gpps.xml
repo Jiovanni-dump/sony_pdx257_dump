@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- These are configurations that must exist on all GMS devices with GPPS Integration. -->
+<config>
+    <!-- Feature Flag for GPPS -->
+    <feature name="com.google.android.feature.GPP_SERVICE_COMPATIBLE" />
+
+    <!-- Allow binding with GPPS -->
+    <allow-association target="com.google.android.as.oss" allowed="com.google.android.odad" />
+    <allow-association target="com.google.android.odad" allowed="com.google.android.as.oss" />
+    <allow-association target="com.google.android.odad" allowed="com.android.providers.telephony" />
+</config>

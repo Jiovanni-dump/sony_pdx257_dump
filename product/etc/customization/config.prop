@@ -1,0 +1,16 @@
+# Copyright 2024 Sony Corporation
+
+################### Static values ###################
+#
+# <key>=<value>
+# e.g. ro.com.google.ime.height_ratio=1.1
+#
+#####################################################
+ro.vendor.sony.wlan.6e_cc_list=HK,JP,AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LI,LT,LU,MT,NL,NO,PL,PT,RO,SK,SI,ES,SE,GB,CH,IS,MY,TH,TW,SG,MO
+ro.setupwizard.rotation_locked=false
+setupwizard.feature.baseline_setupwizard_enabled=true
+ro.oem_sar_back_off_index_table=1,2,1,1,1,6,2,8,1,1,5,2,8,1,7,5,2,8,1,7,1,2,1,1,1,6,2,8,1,1,5,2,8,1,7,5,2,8,1,7
+ro.trackingId.booking=2428090
+ro.facebook.partnerid=sony:ee6c6fe5-cdd0-47f1-a355-9d672e85086a
+ro.linkedin.channel=Sony_PRELOAD
+#####################################################

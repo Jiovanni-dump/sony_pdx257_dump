@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Specific system packages to preinstall on Sony Xperia 10 VII devices based on Android V, per
+     user type. Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <!-- copy from preinstalled-packages-product-pixel-2017-and-newer.xml -->
+
+    <!-- SomcCamera-Elbe -->
+    <install-in-user-type package="jp.co.sony.mc.cameraapp2">
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+        <do-not-install-in user-type="android.os.usertype.profile.CLONE" />
+        <do-not-install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+
+</config>

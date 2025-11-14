@@ -1,0 +1,17 @@
+power_extention                           u:object_r:power_extention_service:s0
+mirror_power_save                         u:object_r:lcd_power_save_service:s0
+sne_wifi_scan                             u:object_r:sne_wifi_scan_service:s0
+xperia_power_service                      u:object_r:xperia_power_service:s0
+hook-activity                             u:object_r:activity_service:s0
+hook-activitytask                         u:object_r:activity_task_service:s0
+hook-auth                                 u:object_r:auth_service:s0
+hook-biometric                            u:object_r:biometric_service:s0
+hook-bluetooth                            u:object_r:bluetooth_manager_service:s0
+hook-fingerprint                          u:object_r:fingerprint_service:s0
+hook-imms                                 u:object_r:imms_service:s0
+hook-isms                                 u:object_r:radio_service:s0
+hook-phone                                u:object_r:radio_service:s0
+security-guard                            u:object_r:cta_guard_service:s0
+com.sonymobile.securityguard.IHookService u:object_r:cta_hook_service:s0
+vendor.semc.system.idd.IIddSystem/default      u:object_r:hal_idd_system_service:s0
+vendor.semc.system.idd.IIddSystem/logreader    u:object_r:hal_idd_system_service:s0

@@ -1,0 +1,9 @@
+######################## Customized property values #########################
+ro.com.google.acsa=true
+ro.com.google.clientidbase.am=android-softbank-jp
+ro.com.google.clientidbase.ms=android-sonymobile-nrev
+ro.com.google.clientidbase.pg=android-sonymobile-deo2
+ro.com.google.clientidbase.vs=android-sonymobile-nrev
+ro.device.product.category=1
+ro.facebook.partnerid=softbank:6ba84367-61a0-4b33-8e2e-6b717177448a
+#############################################################################

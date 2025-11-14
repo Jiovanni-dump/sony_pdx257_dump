@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<preferred-activities>
+    <item name="com.google.android.apps.nbu.files/.gateway.browse.BrowseGatewayHandler">
+        <filter>
+            <action name="android.intent.action.VIEW" />
+            <cat name="android.intent.category.DEFAULT" />
+            <scheme name="content" />
+            <type name="vnd.android.document/root" />
+        </filter>
+    </item>
+    <item name="com.google.android.gm/com.google.android.gm.ComposeActivityGmailExternal">
+        <filter>
+            <action name="android.intent.action.SENDTO" />
+            <cat name="android.intent.category.DEFAULT" />
+            <scheme name="mailto" />
+        </filter>
+    </item>
+    <item name="com.google.android.gm/com.google.android.gm.ConversationListActivityGmail">
+        <filter>
+            <action name="android.intent.action.MAIN" />
+            <cat name="android.intent.category.APP_EMAIL" />
+        </filter>
+    </item>
+    <item name="com.google.android.googlequicksearchbox/com.google.android.search.core.google.GoogleSearch">
+        <filter>
+            <action name="android.intent.action.WEB_SEARCH" />
+            <cat name="android.intent.category.DEFAULT" />
+        </filter>
+    </item>
+</preferred-activities>

@@ -1,0 +1,6 @@
+###################### Customized property values #########################
+ro.com.google.acsa=true
+ro.com.google.clientidbase.am=android-kddi-jp
+ro.com.google.clientidbase.ms=android-kddi-jp-rvc3
+ro.com.google.clientidbase.vs=android-kddi-jp-rvc3
+#############################################################################

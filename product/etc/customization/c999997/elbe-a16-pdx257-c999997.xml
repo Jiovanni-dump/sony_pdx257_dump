@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<!--
+    Copyright 2021 Sony Corporation
+    All rights, including trade secret rights, reserved.
+-->
+<customization id="c999997" >
+    <overlay-package name="com.android.providers.partnerbookmarks.overlay_c999997" />
+    <overlay-package name="com.sonymobile.datadisclaimer.overlay_c999997" />
+    <overlay-package name="com.sonymobile.launcher.overlay_c999997" />
+    <overlay-package name="com.sonymobile.simplehome.overlay_c999997" />
+</customization>
